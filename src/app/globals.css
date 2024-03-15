@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    h1 {
+        @apply text-8xl font-title;
+    }
+
+    h2 {
+        @apply text-6xl font-title;
+    }
+
+    h3 {
+        @apply text-4xl font-title;
+    }
+
+    h4 {
+        @apply text-2xl font-title;
+    }
+
+    h5 {
+        @apply text-lg font-title;
+    }
+
+    p {
+        @apply font-body text-2xl;
+    }
+
+    /* Agrega estilos adicionales para los párrafos según sea necesario */
+}
