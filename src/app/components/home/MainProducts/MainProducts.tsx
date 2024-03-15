@@ -5,14 +5,15 @@ import Image from "next/image";
 
 
 export const MainProducts = async () => {
-  const products = await getProducts()
+  const response = await fetch("http://localhost:3000/api")
+  const {products} = await response.json()
   console.log(products);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4 lg:px-0 py-8">
       {products?.map(product => (
         <article key={product.id} className="bg-white rounded-2xl shadow-md overflow-hidden">
-          <div className="relative p-10 ">
+          <div className="relative p-10 w-100">
             <Image
               src={product.images[0].src}
               alt={product.title}
